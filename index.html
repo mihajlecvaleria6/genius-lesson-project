@@ -2,24 +2,24 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="vieport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./scss/main.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__container">
+          <a href="/">
+            <img src="./images/logo.svg" alt="логотип сучасної пекарні" />
+          </a>
           <nav class="header__nav">
-            <a href="/">
-              <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
-            </a>
             <ul class="header__menu">
               <li>
                 <a class="link" href="#traditions-section">Наші традиції</a>
@@ -34,41 +34,13 @@
           </button>
           <button class="header__burger menu-btn-open" type="button">
             <svg width="24" height="24">
-              <use href="./images/icons.svg#icon-menu"></use>
+              <use href="./images/icon.svg#icon-budger-menu"></use>
             </svg>
           </button>
           <div class="mobile-menu">
             <button class="mobile-menu__btn-close menu-btn-close" type="button">
-              <svg width="24" height="24">
-                <use href="./images/icons.svg#icon-close"></use>
-              </svg>
+              Close
             </button>
-            <a class="mobile-menu__logo" href="/">
-              <img
-                src="./images/logo-dark.svg"
-                alt="Логотип сучасної пекарні"
-              />
-            </a>
-            <ul class="mobile-menu__list">
-              <li>
-                <a class="mobile-menu__link" href="#traditions-section">
-                  Наші традиції
-                </a>
-              </li>
-              <li>
-                <a class="mobile-menu__link" href="#chefs-section">
-                  Шеф-кухарі
-                </a>
-              </li>
-              <li>
-                <a class="mobile-menu__link" href="#formats-section">Формати</a>
-              </li>
-              <li>
-                <a class="mobile-menu__link" href="#contact-section">
-                  Контакти
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -77,7 +49,8 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-section__title">
-            <span class="text-brand">Сучасна</span> пекарня
+            <span class="text-brand">Сучасна</span>
+            пекарня
           </h1>
           <button
             class="hero-section__button button modal-btn-open"
@@ -109,16 +82,16 @@
                 Новий формат традицій
               </h2>
               <p>
-                <span class="text-brand text-bold text-uppercase">
-                  shop bakery
-                </span>
+                <span class="text-brand text-bold text-uppercase"
+                  >shop bakery</span
+                >
                 — це пекарня, яка взяла все найкраще, і зберегла смак
                 традиційної випічки та натуральність інгредієнтів.
               </p>
               <p
                 class="traditions-section__text traditions-section__text--limited"
               >
-                Ми працюємо як найвідоміші мережі —
+                Ми працюємо як найвідоміші мережі—
                 <span class="text-brand text-bold">
                   5 хвилин і замовлення готове
                 </span>
@@ -130,7 +103,7 @@
               class="traditions-section__image"
               srcset="./images/baker-man.jpg 1x, ./images/baker-man@2x.jpg 2x"
               src="./images/baker-man.jpg"
-              alt="Чоловік пекар дивиться на батони із посмішкою"
+              alt="чоловік пекар дивться на батони із посмішкою"
             />
           </div>
         </div>
@@ -155,8 +128,8 @@
                   <h3 class="chef-card__title">Настя</h3>
                   <p class="chef-card__text">Привіт, я Настя!</p>
                   <p class="chef-card__text">
-                    Вже 10 років, я втілюю <br />
-                    у життя цікаві та смачні ідеї.
+                     Вже 10 років, я втілюю <br />
+                    у життя цікаві та смачні ідеї
                   </p>
                   <p class="chef-card__text">
                     Я випічу для вас <br />
@@ -174,15 +147,13 @@
                 />
                 <div>
                   <h3 class="chef-card__title">Влад</h3>
-                  <p class="chef-card__text">Привіт, я Влад!</p>
-                  <p class="chef-card__text">
-                    Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша
+                  <p>Привіт, я Влад!</p>
+                  <p>
+                     Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша
                     любов, з якою ми ділимось кожен раз з Вами через нашу
                     випічку!
                   </p>
-                  <p class="chef-card__text">
-                    Я зроблю для вас унікальну начинку на будь який смак!
-                  </p>
+                  <p> Я зроблю для вас унікальну начинку на будь який смак!</p>
                 </div>
               </article>
             </li>
@@ -201,8 +172,8 @@
               class="formats-section__button carousel-button prev"
               type="button"
             >
-              <svg width="16" height="16">
-                <use href="./images/icons.svg#icon-arrow"></use>
+              <svg class="carousel-button__arrow" width="16px" height="16px">
+                <use href="./images/icon.svg#icon-arrow"></use>
               </svg>
             </button>
             <div class="formats-section__container swiper-container">
@@ -211,7 +182,7 @@
                   <article class="format-card">
                     <img
                       class="format-card__image"
-                      src="./images/walrus-format.jpg"
+                      src="./images/warlus-format.jpg"
                       alt="Walrus format"
                     />
                     <h3 class="format-card__title" lang="en">Walrus</h3>
@@ -230,7 +201,7 @@
                   <article class="format-card">
                     <img
                       class="format-card__image"
-                      src="./images/horseshoe-format.jpg"
+                      src="./images/Horseshoe-format.jpg"
                       alt="Horseshoe format"
                     />
                     <h3 class="format-card__title" lang="en">Horseshoe</h3>
@@ -268,7 +239,7 @@
                   <article class="format-card">
                     <img
                       class="format-card__image"
-                      src="./images/walrus-format.jpg"
+                      src="./images/warlus-format.jpg"
                       alt="Walrus format"
                     />
                     <h3 class="format-card__title" lang="en">Walrus</h3>
@@ -287,7 +258,7 @@
                   <article class="format-card">
                     <img
                       class="format-card__image"
-                      src="./images/horseshoe-format.jpg"
+                      src="./images/Horseshoe-format.jpg"
                       alt="Horseshoe format"
                     />
                     <h3 class="format-card__title" lang="en">Horseshoe</h3>
@@ -333,8 +304,8 @@
               class="formats-section__button carousel-button next"
               type="button"
             >
-              <svg width="16" height="16">
-                <use href="./images/icons.svg#icon-arrow"></use>
+              <svg class="carousel-button__arrow" width="16px" height="16px">
+                <use href="./images/icon.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
@@ -348,18 +319,17 @@
                 Приєднуйся до мережі пекарень
               </h2>
               <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-              <form name="contact-form" autocomplete="off">
+              <form class="contact-form" name="contact-form" autocomplete="off">
                 <div class="contact-section__form-field input">
                   <label class="input__label visually-hidden" for="user-name">
-                    Імʼя
+                    Ім'я
                   </label>
                   <input
                     class="input__control"
                     type="text"
                     name="user-name"
                     id="user-name"
-                    placeholder="Імʼя"
-                    required
+                    placeholder="Ім'я"
                   />
                 </div>
 
@@ -373,22 +343,19 @@
                     name="user-tel"
                     id="user-tel"
                     placeholder="Телефон"
-                    pattern="^\+[0-9]{12}"
-                    required
                   />
                 </div>
 
                 <div class="contact-section__form-field input">
                   <label class="input__label visually-hidden" for="user-email">
-                    Електронна пошта
+                    Електрона пошта
                   </label>
                   <input
                     class="input__control"
                     type="email"
                     name="user-email"
                     id="user-email"
-                    placeholder="Електронна пошта"
-                    required
+                    placeholder="Електрона пошта"
                   />
                 </div>
 
@@ -397,15 +364,15 @@
                 </button>
                 <p class="form-terms">
                   Натискаючи на кнопку я погоджуюсь з
-                  <a class="form-terms__link" href="#">
-                    політикою конфіденційності
-                  </a>
+                  <a class="form-terms__link" href="#"
+                    >політикою конфіденційності</a
+                  >
                 </p>
               </form>
             </div>
             <iframe
               class="contact-section__map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1638708344112!2d30.48904481563916!3d50.456673094797736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0YPQuy4g0KHQtdGH0LXQstGL0YUg0KHRgtGA0LXQu9GM0YbQvtCyLCA1NCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1676051015463!5m2!1sru!2sua"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.164724367906!2d30.491251499999997!3d50.4566572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1720617539949!5m2!1suk!2sua"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -420,18 +387,20 @@
           <nav class="footer__nav">
             <div class="footer__logo">
               <a href="#">
-                <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
+                <img src="./images/logo.svg" alt="логотип сучасної пекарні" />
               </a>
             </div>
             <ul class="footer__menu">
-              <li><a class="link" href="#">Наші традиції</a></li>
-              <li><a class="link" href="#">Шеф-кухарі</a></li>
-              <li><a class="link" href="#">Формати</a></li>
-              <li><a class="link" href="#">Контакти</a></li>
+              <li>
+                <a class="link" href="#traditions-section">Наші традиції</a>
+              </li>
+              <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
+              <li><a class="link" href="#formats-section">Формати</a></li>
+              <li><a class="link" href="#contact-section">Контакти</a></li>
             </ul>
           </nav>
           <address class="footer__address">
-            <div class="footer__contacts">
+            <div class="footer__address-contacts">
               <ul class="footer__address-list">
                 <li>
                   <a class="footer__address-link" href="tel:+380960000007">
@@ -449,32 +418,31 @@
                 <li>
                   <a
                     class="footer__address-link"
-                    href="https://goo.gl/maps/KpjmkaboxKH6DTnk9"
+                    href="https://maps.app.goo.gl/dDePy7uDkvE1SDMv6"
                     target="_blank"
                   >
                     Україна, м. Київ, вул. Січових Стрільців 54
                   </a>
                 </li>
               </ul>
-              <div class="footer__socials">
+              <div class="">
                 <a href="#">
-                  <svg class="footer__socials-icon" width="32" height="32">
-                    <use href="./images/icons.svg#icon-facebook"></use>
+                  <svg class="footer__address-icon" width="32px" height="32px">
+                    <use href="./images/icon.svg#icon-facebook-icon"></use>
                   </svg>
                 </a>
                 <a href="#">
-                  <svg class="footer__socials-icon" width="32" height="32">
-                    <use href="./images/icons.svg#icon-instagram"></use>
+                  <svg class="footer__address-icon" width="32px" height="32px">
+                    <use href="./images/icon.svg#icon-instagram-icon"></use>
                   </svg>
                 </a>
               </div>
             </div>
-
             <div class="footer__address-info">
-              <a class="footer__address-link" href="#" target="_blank">
-                Політика конфіденційності
-              </a>
-              <p class="footer__address-copyright">&copy; 2023 Дані захищені</p>
+              <a class="footer__address-link" href="#" target="_blank"
+                >Політика конфіденційності</a
+              >
+              <p class="footer__address-copyright">&copy; 2022 Дані захищені</p>
             </div>
           </address>
         </div>
@@ -484,25 +452,21 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal__btn-close modal-btn-close" type="button">
-          <svg width="24" height="24">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
+          Close
         </button>
-        <h2 class="modal__title">Замовити дзвінок</h2>
-        <p class="modal__text">
-          Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
-        </p>
+        <h2>Замовити дзвінок</h2>
+        <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
         <form name="modal-form" autocomplete="off">
           <div class="modal__form-field input">
             <label class="input__label visually-hidden" for="user-name">
-              Імʼя
+              Ім'я
             </label>
             <input
               class="input__control"
               type="text"
               name="user-name"
               id="user-name"
-              placeholder="Імʼя"
+              placeholder="Ім'я"
               required
             />
           </div>
@@ -524,14 +488,14 @@
 
           <div class="modal__form-field input">
             <label class="input__label visually-hidden" for="user-email">
-              Електронна пошта
+              Електрона пошта
             </label>
             <input
               class="input__control"
               type="email"
               name="user-email"
               id="user-email"
-              placeholder="Електронна пошта"
+              placeholder="Електрона пошта"
               required
             />
           </div>
@@ -545,9 +509,10 @@
           </p>
         </form>
       </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script src="./js/modal.js"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/formats-slider.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
